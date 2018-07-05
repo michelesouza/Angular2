@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<header>
+  <nav  class = " navegação navbar-dark bg-primária navbar-expand-lg " >
+      <div  class = " container " >
+          <A  class = " navbar-brand "  href = " javascript :; "  th: href = " @ {/} " > Contatos </a >
+
+          <button  class = " navbar-toggler "  tipo = " botão "  data-toggle = " colapso "
+              data-target = " #navbarSupportedContent "  aria-controls = " navbarSupportedContent "
+              aria-expanded = " false "  aria-label = " Navegação de alternância " >
+              <span  class = " navbar-toggler-icon "> </span >
+          </button >
+      </div >
+  </nav >
+</header >
+
+<main  role = " main " >
+  <section  class = " my-4 " >
+    <div  class = " container " >
+        <h2 > Cadastro de contatos </h2 >
+    </div >
+  </section >
+
+  <section >
+    <div  class = "container" >
+      <form  method = "post" # frm = "ngForm" (ngSubmit) = "criar (frm)" >
+        <div  class = "form-group " >
+          <label  for = "nome " > Nome </label >
+          <input  type = "text "  id = " nome "  nome = " nome "
+            class = "formulário-controle "  espaço reservado = " Nome "
+            [( ngModel )] = "contato.nome "  obrigatório />
+        </div >
+
+        <div  class = " form-group " >
+          <label  for = " price " > Price </label >
+          <input  type = " number "  id = " price "  name = " price "
+            class = " form-control "  placeholder = " R$ "
+            [( ngModel )] = " contato.price "  Price  />
+        </div >
+       
+        <div class="">
+            <label  for = " sku " > Sku </label >
+                 <input  type = " number "  id = " sku "  name = " sku "
+                      class = " form-control "  placeholder = " sku "
+                      [( ngModel )] = " contato.price "  Sku  />  
+
+        </div>
+
+        <tipo de botao  = " enviar " class = " btn btn-primary " 
+          [ disabled ] = " frm.invalid " > Salvar </button >
+      </form >
+    </div >
+  </section >
+
+  <section  class = " mt-5 " >
+    <div  class = " container " >
+      <div  class = " table-responsive " >
+        <table  class = " table-hover table-hover " >
+          <thead  class = " centro de texto com luz de propagação " >
+            <tr >
+              <th > Código </th >
+
+              <th  class = " w-50 " > Nome </th >
+
+              <th  class = " w-100" > Price </th >
+
+              <th  class = " w-100 " > Sku </th >
+
+            </tr >
+          </thead >
+
+          <tbody >
+            <tr * ngFor = " permite contato dos contatos " >
+              <td  class = " centro de texto w-25 " > {{contato.id}} </td >
+
+              <td > {{contato.nome}} </td >
+
+              <td > {{contato.price}} </td >
+
+              <td > {{contato.sku}} </td >  
+            </tr >
+          </tbody >
+        </table >
+      </div >
+    </div >
+  </section >
+</main >
+<!--<app-contatos-listagem></app-contatos-listagem>--> 
