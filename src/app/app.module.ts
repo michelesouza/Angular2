@@ -1,22 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
 
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'; //preciso importar o http, mais nao aparece
 
-import { AppComponent } from './app.component';
-import { ContatosListagemComponent } from './contatos-listagem/contatos-listagem.component';
+// import { ContatosListagemComponent } from './contatos-listagem/contatos-listagem.component';
 import { ContatoService } from './contato.service';
+import { ContatosListagemComponent } from './contatos-listagem/contatos-listagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContatosListagemComponent
+    
+    //ContatosListagemComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule
+    BrowserModule,HttpModule,
+    FormsModule
   ],
   providers: [ContatoService],
   bootstrap: [AppComponent]
